@@ -97,7 +97,7 @@ nav h1 {
 
 .navbar a.active {
   color: #ccc;
-  color: green;
+  /* color: green; */
 }
 
 .nav-links a:hover {
