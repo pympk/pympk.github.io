@@ -66,7 +66,45 @@ nav h1 {
   font-size: 2vw; /* scale font size with viewport width */
   text-decoration: none;
   color: var(--primary-color);
+  /* ====== turns home and about bolder at hover */
+  font-weight: inherit; /* Add this line */
 }
+
+/* =============== */
+.navbar {
+  /* background-color: #333; */
+  /* color: #fff; */
+  /* padding: 1em; */
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  /* margin-right: 20px; */
+}
+
+.navbar a {
+  font-size: 2vw; /* scale font size with viewport width */
+  /* color: #fff; */
+  text-decoration: none;
+}
+
+.navbar a.active {
+  color: #ccc;
+  color: green;
+}
+
+.nav-links a:hover {
+  font-style: oblique;
+}
+
+/* =============== */
 
 .banner {
   position: relative; /* Position the banner to allow for absolute positioning */
