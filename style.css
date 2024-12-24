@@ -23,11 +23,7 @@ h1,
 a {
   margin: 0;
   padding: 0;
-  /* font-family: Arial, Helvetica, sans-serif; */
-  /* font-family: "Poppins", sans-serif; */
   font-family: "Poppins", sans-serif;
-  /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif; */
 }
 
 nav {
@@ -37,6 +33,12 @@ nav {
   background-color: var(--navbar-color); /* Optional: Light background */
   color: var(--primary-color);
   padding: 1vw;
+  /* ==== */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the navbar stays on top of other elements */
 }
 
 nav img {
@@ -46,7 +48,6 @@ nav img {
 
 nav h1 {
   font-size: 4vw; /* scale font size with viewport width */
-  /* color: var(--primary-color); */
 }
 
 .nav-links {
@@ -57,19 +58,21 @@ nav h1 {
 }
 
 .nav-links li {
-  margin-right: 2vw; /* add space between links */
+  margin-right: 6vw; /* add space between links */
   font-weight: bolder;
-  color: var(--primary-color);
 }
 
 .nav-links a {
   font-size: 2vw; /* scale font size with viewport width */
   text-decoration: none;
+  color: var(--primary-color);
 }
 
 .banner {
   position: relative; /* Position the banner to allow for absolute positioning */
   width: 100%; /* Make the banner span the full width of the page */
+  /* =========== */
+  padding-top: 8vw; /* Add padding to the top of the banner */
 }
 
 .banner img {
@@ -80,7 +83,7 @@ nav h1 {
 
 .banner-text {
   position: absolute; /* Position the text absolutely within the banner */
-  top: 0.8vw; /* Adjust top position using vw unit */
+  top: 8.8vw; /* Adjust top position using vw unit */
   left: 4.05vw; /* Adjust left position using vw unit */
   font-size: 2vw; /* Set font size using vw unit */
 
@@ -94,7 +97,7 @@ nav h1 {
 /* ==================== */
 
 .image-grid {
-  --gap: 10px;
+  --gap: 14px;
   /* --gap: 16px;   */
   --num-cols: 4;
   --row-height: 300px;
