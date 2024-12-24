@@ -94,7 +94,8 @@ nav h1 {
 /* ==================== */
 
 .image-grid {
-  --gap: 16px;
+  --gap: 10px;
+  /* --gap: 16px;   */
   --num-cols: 4;
   --row-height: 300px;
   box-sizing: border-box;
