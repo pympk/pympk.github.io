@@ -124,6 +124,51 @@ nav h1 {
   grid-row: span 2;
 }
 
+/* ==================== */
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 4em 2em;
+  background-color: #f7f7f7;
+}
+
+.testimonial {
+  margin: 2em;
+  padding: 2em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 4em);
+}
+
+.testimonial img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1em;
+  border-radius: 50%;
+}
+
+.testimonial p {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.testimonial cite {
+  font-size: 1em;
+  font-weight: bold;
+  color: #666;
+}
+
+/* Responsive design */
+/* @media (max-width: 768px) {
+  .testimonial {
+    width: 100%;
+  }
+} */
+
 /* switching from desktop to tablet layout */
 @media (max-width: 992px) {
   .image-grid {
@@ -136,6 +181,9 @@ nav h1 {
   .image-grid {
     --num-cols: 2;
     --row-height: 300px * 2/4;
+  }
+  .testimonial {
+    width: 100%;
   }
 }
 
