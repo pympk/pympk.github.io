@@ -67,9 +67,8 @@ nav h1 {
   text-decoration: none;
   color: var(--primary-color);
   /* ====== turns home and about bolder at hover */
-  font-weight: inherit; /* Add this line */
+  /* font-weight: inherit; */
 }
-
 /* =============== */
 .navbar {
   /* background-color: #333; */
