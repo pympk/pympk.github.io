@@ -117,11 +117,29 @@ nav h1 {
   height: auto; /* Maintain aspect ratio */
 }
 
+/* ==================== */
+
+.banner-text {
+  position: absolute;
+  top: 8.8vw;
+  left: 4.05vw;
+  font-size: 2vw;
+  color: #fff; /* Changed to a specific white color */
+  text-align: left;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Added a semi-transparent black background */
+  padding: 0px;
+}
+
 .banner-text {
   position: absolute; /* Position the text absolutely within the banner */
   top: 8.8vw; /* Adjust top position using vw unit */
   left: 4.05vw; /* Adjust left position using vw unit */
-  font-size: 3vw; /* Set font size using vw unit */
+  font-size: 2vw; /* Set font size using vw unit */
 
   /* Set text color to white (adjust as needed) */
   color: var(--background-color);
