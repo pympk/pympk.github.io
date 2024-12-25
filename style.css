@@ -93,7 +93,9 @@ nav h1 {
 }
 
 .navbar a.active {
-  color: #ccc;
+  /* color: #ccc;
+  color: #000; */
+  text-decoration: underline;
 }
 
 .nav-links a:hover {
