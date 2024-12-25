@@ -85,22 +85,19 @@ nav h1 {
 
 .navbar li {
   display: inline-block;
-  /* margin-right: 20px; */
 }
 
 .navbar a {
-  font-size: 2vw; /* scale font size with viewport width */
-  /* color: #fff; */
+  font-size: 2.5vw; /* scale font size with viewport width */
   text-decoration: none;
 }
 
 .navbar a.active {
   color: #ccc;
-  /* color: green; */
 }
 
 .nav-links a:hover {
-  font-style: oblique;
+  background-color: #c7d2e7;
 }
 
 /* =============== */
