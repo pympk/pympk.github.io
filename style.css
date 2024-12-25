@@ -235,6 +235,7 @@ nav h1 {
 .footer {
   background-color: var(--primary-color);
   color: #fff;
+  /* color: var(--navbar-color); */
   padding: 2em 1em;
 }
 
@@ -253,6 +254,10 @@ nav h1 {
 
 .footer-section h3 {
   margin-top: 0;
+}
+
+.footer-section a {
+  color: #fff;
 }
 
 .footer-bottom {
