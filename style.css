@@ -33,6 +33,7 @@ nav {
   background-color: var(--navbar-color); /* Optional: Light background */
   color: var(--primary-color);
   padding: 1vw;
+  padding: 2em 0;
   /* ==== */
   position: fixed;
   top: 0;
@@ -62,13 +63,6 @@ nav h1 {
   font-weight: bolder;
 }
 
-.nav-links a {
-  font-size: 2vw; /* scale font size with viewport width */
-  text-decoration: none;
-  color: var(--primary-color);
-  /* ====== turns home and about bolder at hover */
-  /* font-weight: inherit; */
-}
 /* =============== */
 .navbar {
   /* background-color: #333; */
