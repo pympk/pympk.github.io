@@ -30,10 +30,16 @@ nav {
   display: flex; /* Use flexbox for easy layout */
   justify-content: space-between; /* Space logo and links evenly */
   align-items: center; /* Center vertically */
+  /* ========== */
   background-color: var(--navbar-color); /* Optional: Light background */
+  background-color: var(--primary-color);
+
+  /* ========== */
   color: var(--primary-color);
+  color: #fff;
+  /* ========== */
   padding: 1vw;
-  padding: 2em 0;
+  padding: 2.2vw;
   /* ==== */
   position: fixed;
   top: 0;
@@ -63,6 +69,13 @@ nav h1 {
   font-weight: bolder;
 }
 
+.nav-links a {
+  font-size: 2vw; /* scale font size with viewport width */
+  text-decoration: none;
+  /* =============== */
+  color: var(--primary-color);
+  color: #fff;
+}
 /* =============== */
 .navbar {
   /* background-color: #333; */
@@ -136,17 +149,21 @@ nav h1 {
 .banner-description {
   width: 100%;
   text-align: center;
+
   padding: 2em 0;
+  padding: 0.8em 0;
+
   position: sticky;
-  top: 8vw; /* adjust this value to match the height of your navbar */
-  background-color: var(
-    --background-color
-  ); /* add this to maintain background color */
+  top: 10vw; /* adjust this value to match the height of your navbar */
+  /* ==================== */
+  background-color: var(--background-color);
+  /* background-color: paleturquoise; */
+  /* ==================== */
   z-index: 1; /* add this to ensure it stays on top */
 }
 
 .banner-description h2 {
-  font-size: 2.5vw;
+  font-size: 3vw;
   color: var(--primary-text);
 }
 
@@ -229,12 +246,20 @@ nav h1 {
   padding: 1em 1em;
 }
 
+.about-image-top {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  margin-top: 12%;
+}
+
 .about-image {
   width: 100%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 1em;
-  margin-top: 8%;
+  margin-top: 3em;
 }
 
 .about-text {
@@ -249,6 +274,15 @@ nav h1 {
 .about-text p {
   font-size: 1.2em;
   margin-bottom: 1em;
+}
+
+.accessibility-text {
+  margin-top: 10vw; /* adjust this value to match the height of your navbar */
+}
+
+.accessibility-text p {
+  font-size: 3vw;
+  padding: 10vw;
 }
 
 .footer {
