@@ -6,13 +6,13 @@
 #333333 (Dark Gray) primary text
 #2960ad (Your Logo Blue) accent text
 */
-
 :root {
-  --primary-color: #2960ad; /* logo blue color */
-  --navbar-color: #f0f0f0; /* off-white color */
-  --background-color: #f8f8f8; /* very light gray color */
-  --primary-text: #333333; /* dark gray color */
-  --accent-text: #2960ad; /* logo blue color */
+  --primary-color: #2960ad;
+  --navbar-text: #fff;
+  --nav-links-hover: #c7d2e7;
+  --background-color: #f8f8f8;
+  --primary-text: #333333;
+  --accent-text: #2960ad;
 }
 
 body,
@@ -24,95 +24,106 @@ a {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 nav {
-  display: flex; /* Use flexbox for easy layout */
-  justify-content: space-between; /* Space logo and links evenly */
-  align-items: center; /* Center vertically */
-  /* ========== */
-  background-color: var(--navbar-color); /* Optional: Light background */
-  /* background-color: green; */
-  /* ========== */
-  color: var(--primary-color);
-  padding: 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--navbar-text);
   padding: 2.2vw;
-  /* ==== */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Ensure the navbar stays on top of other elements */
+  z-index: 1000;
 }
 
 nav img {
-  width: 4vw; /* scale image width with viewport width */
-  height: auto; /* maintain aspect ratio */
+  width: 6vw;
+  height: auto;
 }
 
 nav h1 {
-  font-size: 4vw; /* scale font size with viewport width */
+  font-size: 4vw;
 }
 
 .nav-links {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: none; /* Hide the nav links by default */
 }
 
-.nav-links li {
-  margin-right: 6vw; /* add space between links */
-  font-weight: bolder;
+.nav-links.show {
+  display: block; /* Show the nav links when the nav_menu is clicked */
+  position: absolute;
+  top: 100%;
+  right: 0; /* Change from left: 0 to right: 0 */
+  width: auto; /* Change from width: 100% to width: auto */
+  background-color: var(--primary-color);
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  text-align: right;
+}
+
+.nav-links > li {
+  margin: 3vw 3vw;
 }
 
 .nav-links a {
-  font-size: 2vw; /* scale font size with viewport width */
+  font-size: 4vw;
   text-decoration: none;
-  color: var(--primary-color);
-  /* ====== turns home and about bolder at hover */
-  /* font-weight: inherit; */
-}
-/* =============== */
-.navbar {
-  /* background-color: #333; */
-  /* color: #fff; */
-  /* padding: 1em; */
-  text-align: center;
+  color: var(--navbar-text);
 }
 
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar li {
-  display: inline-block;
-}
-
-.navbar a {
-  font-size: 2.8vw; /* scale font size with viewport width */
-  text-decoration: none;
-}
-
-.navbar a.active {
-  /* color: #ccc;
-  color: #000; */
+.nav-links a.active {
   text-decoration: underline;
 }
 
 .nav-links a:hover {
-  background-color: #c7d2e7;
+  background-color: var(--nav-links-hover);
 }
+
+.nav_menu {
+  display: block; /* Show the nav_menu button */
+  cursor: pointer;
+  /* padding: 1em; */
+  /* padding: 1rem; */
+}
+
+.nav_menu span {
+  display: block;
+  width: 6vw;
+  height: 0.6vw;
+  margin-bottom: 1vw;
+  background-color: var(--navbar-text);
+}
+
+/* =============== */
+/* .nav_menu:focus {
+  outline: 2px solid var(--navbar-text);
+}
+
+.nav-links a:focus {
+  outline: 2px solid var(--navbar-text);
+}
+
+.nav-links {
+  transition: opacity 0.2s ease-in-out;
+} */
 
 /* =============== */
 
 .banner {
   position: relative; /* Position the banner to allow for absolute positioning */
   width: 100%; /* Make the banner span the full width of the page */
-  /* =========== */
-  padding-top: 8vw; /* Add padding to the top of the banner */
+  padding-top: 10vw; /* Add padding to the top of the banner */
 }
 
 .banner img {
@@ -121,57 +132,29 @@ nav h1 {
   height: auto; /* Maintain aspect ratio */
 }
 
-/* ==================== */
-
-.banner-text {
-  position: absolute; /* Position the text absolutely within the banner */
-  top: 8.8vw; /* Adjust top position using vw unit */
-  left: 4.05vw; /* Adjust left position using vw unit */
-  font-size: 2vw; /* Set font size using vw unit */
-
-  /* Set text color to white (adjust as needed) */
-  color: var(--background-color);
-  text-align: left; /* Align text to the left */
-  background-color: rgba(0, 0, 0, 0); /* More transparent background */
-  padding: 0px; /* Reduce padding */
-}
-
-/* ==================== */
-/* .banner-description {
-  width: 100%;
-  text-align: center;
-  padding: 2em 0;
-} */
-
 .banner-description {
   width: 100%;
   text-align: center;
-
-  padding: 2em 0;
   padding: 0.8em 0;
-
   position: sticky;
-  top: 10vw; /* adjust this value to match the height of your navbar */
-  /* ==================== */
+  top: 10vw;
   background-color: var(--background-color);
-  /* background-color: paleturquoise; */
-  /* ==================== */
-  z-index: 1; /* add this to ensure it stays on top */
+  z-index: 1;
 }
 
 .banner-description h2 {
-  font-size: 2.5vw;
+  font-size: 3vw;
   color: var(--primary-text);
 }
 
-/* ==================== */
+/* =============== */
 
 .image-grid {
   --gap: 14px;
-  /* --gap: 16px;   */
   --num-cols: 4;
   --row-height: 300px;
   box-sizing: border-box;
+  margin-top: 10px;
   padding: var(--gap);
   display: grid;
   grid-template-columns: repeat(var(--num-cols), 1fr);
@@ -184,7 +167,6 @@ nav h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* ===== */
   border-radius: 10px;
 }
 
@@ -196,14 +178,14 @@ nav h1 {
   grid-row: span 2;
 }
 
-/* ==================== */
+/* =============== */
 
 .testimonials {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 4em 2em;
-  background-color: #f7f7f7;
+  background-color: var(--background-color);
 }
 
 .testimonial {
@@ -234,7 +216,7 @@ nav h1 {
   color: #666;
 }
 
-/* ==================== */
+/* =============== */
 
 .about-container {
   display: flex;
@@ -243,12 +225,20 @@ nav h1 {
   padding: 1em 1em;
 }
 
+.about-image-top {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  margin-top: 11%;
+}
+
 .about-image {
   width: 100%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 1em;
-  margin-top: 8%;
+  margin-top: 3em;
 }
 
 .about-text {
@@ -265,10 +255,18 @@ nav h1 {
   margin-bottom: 1em;
 }
 
+.accessibility-text {
+  margin-top: 10vw;
+}
+
+.accessibility-text p {
+  font-size: 1.2em;
+  padding: 10vw;
+}
+
 .footer {
   background-color: var(--primary-color);
-  color: #fff;
-  /* color: var(--navbar-color); */
+  color: var(--navbar-text);
   padding: 2em 1em;
 }
 
@@ -290,12 +288,12 @@ nav h1 {
 }
 
 .footer-section a {
-  color: #fff;
+  color: var(--navbar-text);
 }
 
 .footer-bottom {
   background-color: #333;
-  color: #fff;
+  color: var(--navbar-text);
   padding: 1em;
   text-align: center;
   clear: both;
@@ -309,16 +307,23 @@ nav h1 {
 @media (max-width: 992px) {
   .image-grid {
     --num-cols: 3;
-    --row-height: 300px * 3/4;
+    /* --row-height: 300px * 3/4; */
   }
 }
 /* switching from tablet to mobile layout */
 @media (max-width: 768px) {
   .image-grid {
     --num-cols: 2;
-    --row-height: 300px * 2/4;
+    /* --row-height: 300px * 2/4; */
   }
   .testimonial {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-grid {
+    --num-cols: 1;
+    /* --row-height: 150px; */
   }
 }

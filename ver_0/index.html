@@ -23,32 +23,47 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     />
 
-    <link rel="stylesheet" href="style_4.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="navbar">
+    <nav>
       <img src="./img/logos/abblogo_white.png" alt="Bakers Bench Logo" />
       <h1>Bakers Bench</h1>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
+
+      <div
+        class="nav_menu"
+        tabindex="0"
+        aria-label="Toggle navigation menu"
+        aria-haspopup="true"
+        aria-expanded="false"
+        onclick="toggleNav()"
+      >
+        <!-- Hamburger menu icon -->
+        <div class="nav_menu" onclick="toggleNav()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <ul class="nav-links" role="navigation">
+        <li>
+          <a href="index.html" class="active" tabindex="0" aria-label="Home"
+            >Home</a
+          >
+        </li>
+        <li><a href="about.html" tabindex="0" aria-label="About">About</a></li>
       </ul>
     </nav>
 
     <div class="banner">
-      <img src="./img/aBB2_0.jpg" alt="croissants" />
-      <div class="banner-text">
-        <!-- <h1>Bakers Bench</h1> -->
-        <!-- <h2>Where Plant-Based<br />Goodness Meets<br />Exceptional Taste</h2> -->
-      </div>
+      <img src="./img/aBB2_0.jpg" alt="A banner image of croissants" />
     </div>
 
     <div class="banner-description">
       <h2>Where Plant-Based Goodness Meets Exceptional Taste</h2>
     </div>
 
-    <!-- ============ -->
-    <!-- pastry pics -->
     <div class="image-grid">
       <!-- <img
         class="image-grid-col-2 image-grid-row-2"
@@ -110,7 +125,6 @@
       <img src="img/aDSC06415BB18.jpg" alt="" /> -->
     </div>
 
-    <!-- ============= -->
     <section class="testimonials">
       <div class="testimonial">
         <cite>— New York Times</cite>
@@ -138,8 +152,25 @@
         <p>"2024 StarChefs Los Angeles Rising Stars Award Winner"</p>
       </div>
     </section>
+    <!-- <script src="" async defer> -->
+    <script>
+      const navMenu = document.querySelector(".nav_menu");
+      const navLinks = document.querySelector(".nav-links");
 
-    <script src="" async defer></script>
+      navMenu.addEventListener("click", toggleNav);
+      navMenu.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          toggleNav();
+        }
+      });
+
+      function toggleNav() {
+        const navMenu = document.querySelector(".nav_menu");
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("show");
+        navMenu.ariaExpanded = navLinks.classList.contains("show");
+      }
+    </script>
   </body>
 
   <footer class="footer">

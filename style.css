@@ -106,19 +106,6 @@ nav h1 {
 }
 
 /* =============== */
-/* .nav_menu:focus {
-  outline: 2px solid var(--navbar-text);
-}
-
-.nav-links a:focus {
-  outline: 2px solid var(--navbar-text);
-}
-
-.nav-links {
-  transition: opacity 0.2s ease-in-out;
-} */
-
-/* =============== */
 
 .banner {
   position: relative; /* Position the banner to allow for absolute positioning */
@@ -307,14 +294,12 @@ nav h1 {
 @media (max-width: 992px) {
   .image-grid {
     --num-cols: 3;
-    /* --row-height: 300px * 3/4; */
   }
 }
 /* switching from tablet to mobile layout */
 @media (max-width: 768px) {
   .image-grid {
     --num-cols: 2;
-    /* --row-height: 300px * 2/4; */
   }
   .testimonial {
     width: 100%;
@@ -324,6 +309,5 @@ nav h1 {
 @media (max-width: 480px) {
   .image-grid {
     --num-cols: 1;
-    /* --row-height: 150px; */
   }
 }
