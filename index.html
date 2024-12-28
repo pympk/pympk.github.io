@@ -34,7 +34,7 @@
       });
 
       sliderContainer.addEventListener("touchmove", (event) => {
-        const slideOffset = -(event.touches[0].clientX - startX) / slideWidth;
+        const slideOffset = (event.touches[0].clientX - startX) / slideWidth;
         sliderContainer.style.transform = `translateX(${
           slideOffset * slideWidth
         }px)`;
@@ -42,7 +42,7 @@
 
       sliderContainer.addEventListener("touchend", () => {
         const slideOffset = Math.round(
-          -(event.changedTouches[0].clientX - startX) / slideWidth
+          (event.changedTouches[0].clientX - startX) / slideWidth
         );
         currentSlide += slideOffset;
         if (currentSlide < 0) {
@@ -61,7 +61,7 @@
       });
 
       sliderContainer.addEventListener("mousemove", (event) => {
-        const slideOffset = -(event.clientX - startX) / slideWidth;
+        const slideOffset = (event.clientX - startX) / slideWidth;
         sliderContainer.style.transform = `translateX(${
           slideOffset * slideWidth
         }px)`;
