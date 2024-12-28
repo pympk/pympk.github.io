@@ -21,5 +21,64 @@
         <!-- Add more images here -->
       </div>
     </div>
+    <script>
+      const sliderContainer = document.querySelector(".slider-container");
+      let startX = 0;
+      let currentSlide = 0;
+      const slides = sliderContainer.children;
+      const slideWidth = slides[0].offsetWidth;
+
+      // Touch events
+      sliderContainer.addEventListener("touchstart", (event) => {
+        startX = event.touches[0].clientX;
+      });
+
+      sliderContainer.addEventListener("touchmove", (event) => {
+        const slideOffset = (event.touches[0].clientX - startX) / slideWidth;
+        sliderContainer.style.transform = `translateX(${
+          slideOffset * slideWidth
+        }px)`;
+      });
+
+      sliderContainer.addEventListener("touchend", () => {
+        const slideOffset = Math.round(
+          (event.changedTouches[0].clientX - startX) / slideWidth
+        );
+        currentSlide += slideOffset;
+        if (currentSlide < 0) {
+          currentSlide = 0;
+        } else if (currentSlide >= slides.length) {
+          currentSlide = slides.length - 1;
+        }
+        sliderContainer.style.transform = `translateX(${
+          currentSlide * -slideWidth
+        }px)`;
+      });
+
+      // Mouse events
+      sliderContainer.addEventListener("mousedown", (event) => {
+        startX = event.clientX;
+      });
+
+      sliderContainer.addEventListener("mousemove", (event) => {
+        const slideOffset = (event.clientX - startX) / slideWidth;
+        sliderContainer.style.transform = `translateX(${
+          slideOffset * slideWidth
+        }px)`;
+      });
+
+      sliderContainer.addEventListener("mouseup", () => {
+        const slideOffset = Math.round((event.clientX - startX) / slideWidth);
+        currentSlide += slideOffset;
+        if (currentSlide < 0) {
+          currentSlide = 0;
+        } else if (currentSlide >= slides.length) {
+          currentSlide = slides.length - 1;
+        }
+        sliderContainer.style.transform = `translateX(${
+          currentSlide * -slideWidth
+        }px)`;
+      });
+    </script>
   </body>
 </html>

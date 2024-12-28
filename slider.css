@@ -1,3 +1,21 @@
+/* .image-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.slider-container img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 10px;
+} */
+
 .image-slider {
   position: relative;
   overflow: hidden;
@@ -6,6 +24,7 @@
 .slider-container {
   display: flex;
   flex-wrap: nowrap;
+  transition: transform 0.5s ease-in-out;
 }
 
 .slider-container img {
