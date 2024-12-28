@@ -106,6 +106,19 @@ nav h1 {
 }
 
 /* =============== */
+/* .nav_menu:focus {
+  outline: 2px solid var(--navbar-text);
+}
+
+.nav-links a:focus {
+  outline: 2px solid var(--navbar-text);
+}
+
+.nav-links {
+  transition: opacity 0.2s ease-in-out;
+} */
+
+/* =============== */
 
 .banner {
   position: relative; /* Position the banner to allow for absolute positioning */

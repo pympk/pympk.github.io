@@ -27,14 +27,28 @@
     <nav>
       <img src="./img/logos/abblogo_white.png" alt="Bakers Bench Logo" />
       <h1>Bakers Bench</h1>
-      <div class="nav_menu" onclick="toggleNav()">
-        <span></span>
-        <span></span>
-        <span></span>
+
+      <div
+        class="nav_menu"
+        tabindex="0"
+        aria-label="Toggle navigation menu"
+        aria-haspopup="true"
+        aria-expanded="false"
+        onclick="toggleNav()"
+      >
+        <!-- Hamburger menu icon -->
+        <div class="nav_menu" onclick="toggleNav()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+
+      <ul class="nav-links" role="navigation">
+        <li>
+          <a href="index.html" tabindex="0" aria-label="Home">Home</a>
+        </li>
+        <li><a href="about.html" tabindex="0" aria-label="About">About</a></li>
       </ul>
     </nav>
 
@@ -48,9 +62,21 @@
       </p>
     </div>
     <script>
+      const navMenu = document.querySelector(".nav_menu");
+      const navLinks = document.querySelector(".nav-links");
+
+      navMenu.addEventListener("click", toggleNav);
+      navMenu.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          toggleNav();
+        }
+      });
+
       function toggleNav() {
+        const navMenu = document.querySelector(".nav_menu");
         const navLinks = document.querySelector(".nav-links");
         navLinks.classList.toggle("show");
+        navMenu.ariaExpanded = navLinks.classList.contains("show");
       }
     </script>
   </body>
