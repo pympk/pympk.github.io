@@ -28,13 +28,29 @@
       const slides = sliderContainer.children;
       const slideWidth = slides[0].offsetWidth;
 
+      // Function to handle slide transitions
+      function transitionSlide(offset) {
+        currentSlide += offset;
+
+        // Loop back to the beginning
+        if (currentSlide < 0) {
+          currentSlide = slides.length - 1;
+        } else if (currentSlide >= slides.length) {
+          currentSlide = 0;
+        }
+
+        sliderContainer.style.transform = `translateX(${
+          currentSlide * -slideWidth
+        }px)`;
+      }
+
       // Touch events
       sliderContainer.addEventListener("touchstart", (event) => {
         startX = event.touches[0].clientX;
       });
 
       sliderContainer.addEventListener("touchmove", (event) => {
-        const slideOffset = (event.touches[0].clientX - startX) / slideWidth;
+        const slideOffset = -(event.touches[0].clientX - startX) / slideWidth;
         sliderContainer.style.transform = `translateX(${
           slideOffset * slideWidth
         }px)`;
@@ -42,17 +58,9 @@
 
       sliderContainer.addEventListener("touchend", () => {
         const slideOffset = Math.round(
-          (event.changedTouches[0].clientX - startX) / slideWidth
+          -(event.changedTouches[0].clientX - startX) / slideWidth
         );
-        currentSlide += slideOffset;
-        if (currentSlide < 0) {
-          currentSlide = 0;
-        } else if (currentSlide >= slides.length) {
-          currentSlide = slides.length - 1;
-        }
-        sliderContainer.style.transform = `translateX(${
-          currentSlide * -slideWidth
-        }px)`;
+        transitionSlide(slideOffset);
       });
 
       // Mouse events
@@ -61,7 +69,7 @@
       });
 
       sliderContainer.addEventListener("mousemove", (event) => {
-        const slideOffset = (event.clientX - startX) / slideWidth;
+        const slideOffset = -(event.clientX - startX) / slideWidth;
         sliderContainer.style.transform = `translateX(${
           slideOffset * slideWidth
         }px)`;
@@ -69,15 +77,7 @@
 
       sliderContainer.addEventListener("mouseup", () => {
         const slideOffset = Math.round((event.clientX - startX) / slideWidth);
-        currentSlide += slideOffset;
-        if (currentSlide < 0) {
-          currentSlide = 0;
-        } else if (currentSlide >= slides.length) {
-          currentSlide = slides.length - 1;
-        }
-        sliderContainer.style.transform = `translateX(${
-          currentSlide * -slideWidth
-        }px)`;
+        transitionSlide(slideOffset);
       });
     </script>
   </body>
