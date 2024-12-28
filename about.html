@@ -24,9 +24,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="navbar">
+    <nav>
       <img src="./img/logos/abblogo_white.png" alt="Bakers Bench Logo" />
       <h1>Bakers Bench</h1>
+      <div class="nav_menu" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
@@ -74,7 +79,13 @@
       <p></p>
     </div>
 
-    <script src="" async defer></script>
+    <!-- <script src="" async defer></script> -->
+    <script>
+      function toggleNav() {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("show");
+      }
+    </script>
   </body>
 
   <footer class="footer">

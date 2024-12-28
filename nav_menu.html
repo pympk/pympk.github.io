@@ -1,0 +1,49 @@
+<!-- https://www.accessibilitychecker.org/audit/?website=pympk.github.io&flag=us -->
+<!-- https://wave.webaim.org/report#/pympk.github.io -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Bakers Bench</title>
+    <link
+      rel="shortcut icon"
+      href="./img/logos/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+
+    <link rel="stylesheet" href="nav_menu.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="./img/logos/abblogo_white.png" alt="Bakers Bench Logo" />
+      <h1>Bakers Bench</h1>
+      <div class="nav_menu" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </body>
+  <script>
+    function toggleNav() {
+      const navLinks = document.querySelector(".nav-links");
+      navLinks.classList.toggle("show");
+    }
+  </script>
+</html>

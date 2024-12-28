@@ -23,17 +23,13 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_3.css" />
   </head>
   <body>
-    <nav>
+    <nav class="navbar">
+      <!-- <img src="./img/logos/abblogo.png" alt="Bakers Bench Logo" /> -->
       <img src="./img/logos/abblogo_white.png" alt="Bakers Bench Logo" />
       <h1>Bakers Bench</h1>
-      <div class="nav_menu" onclick="toggleNav()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -41,13 +37,19 @@
     </nav>
 
     <div class="banner">
-      <img src="./img/aBB2_0.jpg" alt="A banner image of croissants" />
+      <img src="./img/aBB2_0.jpg" alt="croissants" />
+      <div class="banner-text">
+        <!-- <h1>Bakers Bench</h1> -->
+        <!-- <h2>Where Plant-Based<br />Goodness Meets<br />Exceptional Taste</h2> -->
+      </div>
     </div>
 
     <div class="banner-description">
       <h2>Where Plant-Based Goodness Meets Exceptional Taste</h2>
     </div>
 
+    <!-- ============ -->
+    <!-- pastry pics -->
     <div class="image-grid">
       <!-- <img
         class="image-grid-col-2 image-grid-row-2"
@@ -109,6 +111,7 @@
       <img src="img/aDSC06415BB18.jpg" alt="" /> -->
     </div>
 
+    <!-- ============= -->
     <section class="testimonials">
       <div class="testimonial">
         <cite>— New York Times</cite>
@@ -136,13 +139,8 @@
         <p>"2024 StarChefs Los Angeles Rising Stars Award Winner"</p>
       </div>
     </section>
-    <!-- <script src="" async defer> -->
-    <script>
-      function toggleNav() {
-        const navLinks = document.querySelector(".nav-links");
-        navLinks.classList.toggle("show");
-      }
-    </script>
+
+    <script src="" async defer></script>
   </body>
 
   <footer class="footer">

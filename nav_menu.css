@@ -1,0 +1,102 @@
+:root {
+  --primary-color: #2960ad;
+  --navbar-text: #fff;
+  --nav-links-hover: #c7d2e7;
+  --background-color: #f8f8f8;
+  --primary-text: #333333;
+  --accent-text: #2960ad;
+}
+
+body,
+nav,
+ul,
+li,
+h1,
+a {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--navbar-text);
+  padding: 2.2vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav img {
+  width: 6vw;
+  /* width: 4em; */
+  /* width: 4rem; */
+  height: auto;
+}
+
+nav h1 {
+  /* font-size: 2em; */
+  /* font-size: 2rem; */
+  font-size: 4vw;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none; /* Hide the nav links by default */
+}
+
+.nav-links.show {
+  display: block; /* Show the nav links when the nav_menu is clicked */
+  position: absolute;
+  top: 100%;
+  right: 0; /* Change from left: 0 to right: 0 */
+  width: auto; /* Change from width: 100% to width: auto */
+  background-color: var(--primary-color);
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  text-align: right;
+}
+
+.nav-links > li {
+  margin: 3vw 3vw;
+}
+
+.nav-links a {
+  font-size: 4vw;
+  text-decoration: none;
+  color: var(--navbar-text);
+}
+
+.nav-links a.active {
+  text-decoration: underline;
+}
+
+.nav-links a:hover {
+  background-color: var(--nav-links-hover);
+}
+
+.nav_menu {
+  display: block; /* Show the nav_menu button */
+  cursor: pointer;
+  padding: 1em;
+  padding: 1rem;
+}
+
+.nav_menu span {
+  display: block;
+  width: 6vw;
+  height: 0.6vw;
+  margin-bottom: 1vw;
+  background-color: var(--navbar-text);
+}
