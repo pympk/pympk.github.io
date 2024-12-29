@@ -6,6 +6,7 @@
 .slider-container {
   display: flex;
   flex-wrap: nowrap;
+  transition: transform 0.5s ease-in-out;
 }
 
 .slider-container img {
@@ -16,23 +17,33 @@
   margin-right: 10px;
 } */
 
+/* ======== */
 .image-slider {
   position: relative;
-  overflow: hidden;
+  width: 100%; /* Full width of the container */
+  overflow: hidden; /* Hide any overflow */
 }
 
 .slider-container {
   display: flex;
   flex-wrap: nowrap;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease; /* Smooth transition for scrolling */
+  scroll-snap-type: x mandatory; /* Enable scroll snapping horizontally */
+  scroll-behavior: smooth; /* Smooth scroll on manual or programmatic scroll */
 }
 
 .slider-container img {
-  width: 300px;
-  height: 300px;
+  width: 300px; /* Image width */
+  height: 300px; /* Image height */
   object-fit: cover;
   border-radius: 10px;
-  margin-right: 10px;
+  margin-right: 10px; /* Space between images */
+  scroll-snap-align: center; /* Ensure images snap to the center */
+}
+
+/* Optional: Add a pointer to show that the container can be swiped */
+.image-slider::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
 }
 
 /* Add some basic animation to the slider */
