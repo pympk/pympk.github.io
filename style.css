@@ -41,7 +41,6 @@
   scroll-snap-align: center; /* Ensure images snap to the center */
 }
 
-/* Optional: Add a pointer to show that the container can be swiped */
 .image-slider::-webkit-scrollbar {
   display: none; /* Hide scrollbar */
 }

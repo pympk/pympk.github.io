@@ -24,9 +24,19 @@
 
     <script>
       const sliderContainer = document.querySelector(".slider-container");
+      const images = document.querySelectorAll(".slider-container img");
+      let isMouseDown = false;
       let startX = 0;
       let scrollLeft = 0;
-      let isMouseDown = false;
+
+      // Clone the first and last images to create a looping effect
+      const firstImage = images[0].cloneNode(true);
+      const lastImage = images[images.length - 1].cloneNode(true);
+      sliderContainer.appendChild(firstImage);
+      sliderContainer.insertBefore(lastImage, images[0]);
+
+      // Adjust the initial scroll position to display the correct images
+      sliderContainer.scrollLeft = 300; // Adjust this value based on your image width + margin
 
       // Handle mouse/touch start
       sliderContainer.addEventListener("mousedown", (e) => {
@@ -46,7 +56,7 @@
         if (!isMouseDown) return;
         e.preventDefault();
         const x = e.pageX - sliderContainer.offsetLeft;
-        const walk = (x - startX) * 2; // Set scroll speed here
+        const walk = (x - startX) * 2;
         sliderContainer.scrollLeft = scrollLeft - walk;
       });
 
@@ -54,7 +64,7 @@
         if (!isMouseDown) return;
         e.preventDefault();
         const x = e.touches[0].pageX - sliderContainer.offsetLeft;
-        const walk = (x - startX) * 2; // Set scroll speed here
+        const walk = (x - startX) * 2;
         sliderContainer.scrollLeft = scrollLeft - walk;
       });
 
@@ -69,20 +79,31 @@
         snapToCenter();
       });
 
-      // Function to snap the image to the center
+      // Function to snap the image to the center and loop if needed
       function snapToCenter() {
-        const images = sliderContainer.querySelectorAll("img");
         const containerWidth = sliderContainer.offsetWidth;
         const imageWidth = images[0].offsetWidth + 10; // Account for the margin
-
         const scrollPosition = sliderContainer.scrollLeft;
         const index = Math.round(scrollPosition / imageWidth);
         const snapToPosition = index * imageWidth;
 
-        sliderContainer.scrollTo({
-          left: snapToPosition,
-          behavior: "smooth",
-        });
+        // Looping logic: If we're at the first or last image, jump to the other side
+        if (index <= 0) {
+          sliderContainer.scrollTo({
+            left: images.length * imageWidth, // Jump to the end
+            behavior: "smooth",
+          });
+        } else if (index >= images.length) {
+          sliderContainer.scrollTo({
+            left: imageWidth, // Jump to the start
+            behavior: "smooth",
+          });
+        } else {
+          sliderContainer.scrollTo({
+            left: snapToPosition,
+            behavior: "smooth",
+          });
+        }
       }
     </script>
   </body>
