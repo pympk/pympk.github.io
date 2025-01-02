@@ -7,7 +7,7 @@
     letter-spacing: 1px;
     font-family: "Poppins", sans-serif;
   }
-  .container {
+  .navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,25 +17,25 @@
     height: 10vw;
   }
 
-  .container img {
+  .navbar img {
     width: auto;
     height: 4vw;
     margin: 3vw;
     margin: 3vw 3vw 3vw 4vw;
   }
 
-  .container .text {
+  .navbar .text {
     font-size: 3vw;
   }
 
-  .container .spacer {
+  .navbar .spacer {
     flex-grow: 1;
   }
-  .text.right {
+  .navbar .text.right {
     margin-right: 3vw;
   }
 
-  .text.right:last-child {
+  .navbar .text.right:last-child {
     margin-right: 4vw;
   }
 </style>
@@ -49,7 +49,7 @@
   />
   <!-- <link rel="stylesheet" href="layout_1.css" /> -->
 </head>
-<div class="container">
+<nav class="navbar">
   <div>
     <img src="../img/logos/abblogo_white.png" alt="Bakers Bench Logo" />
   </div>
@@ -61,46 +61,4 @@
   <div class="text right">Instagram</div>
 
   <div class="text right">About</div>
-</div>
-<div class="container" style="background-color: #fff"></div>
-<div class="container">
-  <div>
-    <img src="../img/logos/abblogo_white.png" alt="Bakers Bench Logo" />
-  </div>
-
-  <div class="text left">Bakers Bench</div>
-  <div class="text spacer"></div>
-
-  <div class="text right">Location</div>
-  <div class="text right">Instagram</div>
-
-  <div class="text right">About</div>
-</div>
-<!-- <nav>
-  <img src="../img/logos/abblogo_white.png" alt="Bakers Bench Logo" />
-  <h1>Bakers Bench</h1>
-
-  <div
-    class="nav_menu"
-    tabindex="0"
-    aria-label="Toggle navigation menu"
-    aria-haspopup="true"
-    aria-expanded="false"
-    onclick="toggleNav()"
-  >
-    <div class="nav_menu" onclick="toggleNav()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-
-  <ul class="nav-links" role="navigation">
-    <li>
-      <a href="index.html" class="active" tabindex="0" aria-label="Home"
-        >Home</a
-      >
-    </li>
-    <li><a href="about.html" tabindex="0" aria-label="About">About</a></li>
-  </ul>
-</nav> -->
+</nav>
