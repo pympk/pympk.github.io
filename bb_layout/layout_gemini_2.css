@@ -41,6 +41,12 @@ a,
   --accent-text: #2960ad;
 }
 
+.announcement {
+  background-color: orange;
+  text-align: center;
+  font-weight: 600;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
