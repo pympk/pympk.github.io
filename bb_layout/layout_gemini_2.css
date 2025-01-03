@@ -41,7 +41,6 @@ a,
   --accent-text: #2960ad;
 }
 
-/* New navbar styles */
 .navbar {
   display: flex;
   flex-direction: row;
@@ -50,13 +49,17 @@ a,
   color: #fff;
   width: 100%;
   height: 10vw;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar img {
   width: auto;
   height: 4vw;
-  margin: 3vw 3vw 3vw 4vw;
   vertical-align: middle;
+  margin-left: 3vw;
+  margin-right: 3vw;
 }
 
 .navbar .text {
@@ -75,7 +78,6 @@ a,
   margin-right: 4vw;
 }
 
-/* Hero section styles */
 .hero {
   width: 100%;
   height: 56vw;
@@ -152,7 +154,14 @@ a,
 }
 
 .banner h2 {
-  font-size: 3.6vw;
+  font-size: 3vw;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.banner h2 .bold-text {
+  font-size: 3vw;
+  font-weight: 502;
 }
 
 /* Testimonials section styles */
@@ -182,7 +191,7 @@ a,
 
 .testimonial cite {
   font-size: 3.6vw;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 150%;
   letter-spacing: 1px;
 }
@@ -190,7 +199,7 @@ a,
 .testimonial h2 {
   font-size: 3.2vw;
   font-style: italic;
-  font-weight: bold;
+  font-weight: 600;
   margin: 1em;
   color: #666;
   line-height: 150%;
@@ -226,12 +235,26 @@ a,
   width: 40%;
 }
 
-.footer-section h3 {
+.footer-section h2 {
   margin-top: 0;
+  font-size: 3.6vw;
+  margin-bottom: 2vw;
+  font-weight: 600;
+  /* padding-bottom: 2vw; */
 }
 
 .footer-section a {
   color: var(--navbar-text);
+  font-size: 3.2vw;
+  padding-bottom: 2vw;
+}
+.footer-section p {
+  color: var(--navbar-text);
+  font-size: 3.2vw;
+  padding-bottom: 2vw;
+}
+.footer-section ul li:last-child {
+  padding-bottom: 4vw;
 }
 
 .footer-bottom {
