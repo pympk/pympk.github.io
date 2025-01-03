@@ -22,6 +22,7 @@ a,
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   max-width: 1200px;
+  letter-spacing: 1px;
 }
 
 /* Color recommended by Gemini AI
@@ -243,20 +244,19 @@ a,
 
 .footer-section h2 {
   margin-top: 0;
-  font-size: 3.6vw;
+  font-size: 3.2vw;
   margin-bottom: 2vw;
   font-weight: 600;
-  /* padding-bottom: 2vw; */
 }
 
 .footer-section a {
   color: var(--navbar-text);
-  font-size: 3.2vw;
+  font-size: 3vw;
   padding-bottom: 2vw;
 }
 .footer-section p {
   color: var(--navbar-text);
-  font-size: 3.2vw;
+  font-size: 3vw;
   padding-bottom: 2vw;
 }
 .footer-section ul li:last-child {

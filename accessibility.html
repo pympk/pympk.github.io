@@ -24,32 +24,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <img src="./img/logos/abblogo_white.png" alt="Bakers Bench Logo" />
-      <h1>Bakers Bench</h1>
-
-      <div
-        class="nav_menu"
-        tabindex="0"
-        aria-label="Toggle navigation menu"
-        aria-haspopup="true"
-        aria-expanded="false"
-        onclick="toggleNav()"
-      >
-        <!-- Hamburger menu icon -->
-        <div class="nav_menu" onclick="toggleNav()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+    <nav class="navbar">
+      <div>
+        <img src="./img/logos/abblogo_white.png" alt="Bakers Bench Logo" />
       </div>
-
-      <ul class="nav-links" role="navigation">
-        <li>
-          <a href="index.html" tabindex="0" aria-label="Home">Home</a>
-        </li>
-        <li><a href="about.html" tabindex="0" aria-label="About">About</a></li>
-      </ul>
+      <div class="text left">
+        <a href="index.html" tabindex="0" aria-label="Home" target="_blank"
+          >Bakers Bench</a
+        >
+      </div>
+      <div class="text spacer"></div>
+      <div class="text right">
+        <a
+          href="https://maps.app.goo.gl/CNb9Sd2smJnF6nrS9"
+          tabindex="0"
+          aria-label="Location"
+          target="_blank"
+          >Location</a
+        >
+      </div>
+      <div class="text right">
+        <a
+          href="https://www.instagram.com/bakers.bench/"
+          tabindex="0"
+          aria-label="Instagram"
+          target="_blank"
+          >Instagram</a
+        >
+      </div>
+      <div class="text right">
+        <a href="about.html" tabindex="0" aria-label="About">About</a>
+      </div>
     </nav>
 
     <div class="accessibility-text">
@@ -57,70 +62,47 @@
         We are committed to making our website as accessible as possible to all
         visitors. We aim to conform to the Web Content Accessibility Guidelines
         (WCAG) 2.1 up to level AA to the best of our ability. If you encounter
-        any difficulties accessing portions of our website, please contact us at
-        hello@bakersbenchla.com and we can provide assistance. Thank you!
+        any difficulties accessing portions of our website, please contact us
+        at: <br />
+        <span> hello@bakersbenchla.com </span>
+        <br />
+        and we can provide assistance. Thank you!
       </p>
     </div>
-    <script>
-      const navMenu = document.querySelector(".nav_menu");
-      const navLinks = document.querySelector(".nav-links");
 
-      navMenu.addEventListener("click", toggleNav);
-      navMenu.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-          toggleNav();
-        }
-      });
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h2>Location & Hours</h2>
+          <p>
+            <a href="https://maps.app.goo.gl/t5m62bCyVpmE3vqQ8" target="_blank">
+              1021 Alpine, Los Angeles, California 90012
+            </a>
+          </p>
 
-      function toggleNav() {
-        const navMenu = document.querySelector(".nav_menu");
-        const navLinks = document.querySelector(".nav-links");
-        navLinks.classList.toggle("show");
-        navMenu.ariaExpanded = navLinks.classList.contains("show");
-      }
-    </script>
+          <p>Mon - Fri:  8-3 <br />Sat - Sun:  8-4</p>
+        </div>
+        <div class="footer-section">
+          <h2>Follow Us</h2>
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/bakers.bench/" target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li><a href="mailto:hello@bakersbenchla.com">Email</a></li>
+          </ul>
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="accessibility.html">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Bakers Bench. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script></script>
   </body>
-  <footer class="footer">
-    <div class="footer-content">
-      <!-- <div class="footer-section">
-        <h3>About Us</h3>
-        <p>
-          We're passionate about baking and dedicated to providing the best
-          experience for our customers.
-        </p>
-      </div> -->
-      <div class="footer-section">
-        <!-- <h3>Hours & Location</h3> -->
-        <h2>Hours & Location</h2>
-        <p>
-          <a href="https://maps.app.goo.gl/t5m62bCyVpmE3vqQ8" target="_blank"
-            >1021 Alpine, Bldg A, Los Angeles, California 90012</a
-          >
-        </p>
-        <p>Mon - Fri: &nbsp;8-3 <br />Sat - Sun: &nbsp;8-4</p>
-      </div>
-      <div class="footer-section">
-        <h2>Follow Us</h2>
-        <ul>
-          <li>
-            <a href="https://www.instagram.com/bakers.bench/" target="_blank"
-              >Instagram</a
-            >
-          </li>
-          <li>
-            <a href="mailto:hello@bakersbenchla.com">Email</a>
-          </li>
-        </ul>
-        <h2>Resources</h2>
-        <ul>
-          <li>
-            <a href="accessibility.html">Accessibility</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Bakers Bench. All rights reserved.</p>
-    </div>
-  </footer>
 </html>
