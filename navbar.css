@@ -85,6 +85,9 @@ a,
   overflow: hidden;
   background-color: var(--primary-color);
   position: relative;
+  /* === */
+  display: flex;
+  align-items: center;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -97,7 +100,7 @@ a,
   color: white;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  /* font-size: 17px; */
   display: block;
 }
 
@@ -117,10 +120,14 @@ a,
 }
 
 /* Style the active link (or home/logo) */
-.active {
+/* .active {
   background-color: #04aa6d;
   color: white;
-}
+} */
 /* inline-block {
   background-color: red;
 } */
+a.active {
+  display: flex;
+  align-items: center;
+}
