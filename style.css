@@ -309,10 +309,12 @@ a,
 }
 
 .about-text p {
-  font-size: 3.2vw;
-  padding-top: 1.5em;
-  padding-left: 2em;
-  padding-right: 2em;
+  font-size: 3.6vw;
+  font-style: italic;
+  margin: 1em;
+  color: #666;
+  line-height: 150%;
+  letter-spacing: 1px;
 }
 
 .about-text a {
@@ -327,11 +329,20 @@ a,
   font-size: 3.2vw;
   padding: 10vw;
 }
+.accessibility-text p {
+  font-size: 3.6vw;
+  font-style: italic;
+  margin: 1em;
+  color: #666;
+  line-height: 180%;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
 
 .accessibility-text p span {
-  font-size: 3.2vw;
-  /* padding: 10vw; */
-  font-weight: 500;
+  font-size: 3.6vw;
+  font-style: italic;
+  font-weight: 800;
 }
 
 /* @media only screen and (max-width: 768px) {
