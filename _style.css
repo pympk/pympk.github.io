@@ -305,19 +305,19 @@ section.hero .slideshow-container {
 
 .footer-section h2 {
   margin-top: 0;
-  font-size: 3.4vw;
+  font-size: 3.6vw;
   margin-bottom: 2vw;
+  font-weight: 600;
 }
 
-.footer-section a,
-li {
+.footer-section a {
   color: var(--navbar-text);
-  font-size: 2.8vw;
+  font-size: 3vw;
   padding-bottom: 2vw;
 }
 .footer-section p {
   color: var(--navbar-text);
-  font-size: 2.8vw;
+  font-size: 3.6vw;
   padding-bottom: 2vw;
 }
 .footer-section ul li:last-child {
@@ -336,7 +336,6 @@ li {
 .footer-bottom p {
   margin-bottom: 0;
   font-size: 3.2vw;
-  font-size: 2.8vw;
 }
 
 .about-container {
