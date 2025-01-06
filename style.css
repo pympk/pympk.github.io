@@ -50,43 +50,73 @@ a,
   font-weight: 600;
 }
 
-.navbar {
+/* ============= */
+
+body {
+  position: relative;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: var(--primary-color);
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #2960ad;
-  /* color: #fff; */
-  width: 100%;
   height: 14vw;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
   position: sticky;
   top: 0;
-  z-index: 1000;
 }
 
-.navbar img {
-  width: auto;
-  height: 4vw;
-  vertical-align: middle;
-  margin-left: 3vw;
-  margin-right: 3vw;
-}
-
-.navbar .text a {
+.topnav .icon {
   color: var(--navbar-text);
+  display: flex;
+  align-items: center;
+}
+
+.topnav a.icon img {
+  height: 7vw;
+  align-items: center;
+  padding-left: 3vw;
+  object-fit: cover;
+}
+
+.topnav a:last-child {
   text-decoration: none;
+  font-size: 7vw;
+  padding-right: 3vw;
 }
 
-.navbar .spacer {
-  flex-grow: 1;
+.topnav-links {
+  display: none;
+  flex-direction: column;
+  padding-left: 3vw;
+  font-size: 7vw;
+  /* position: absolute;
+  top: 14vw;
+  z-index: 1000; */
 }
 
-.navbar .text.right {
-  margin-right: 3vw;
+.topnav-links a {
+  text-decoration: none;
+  color: black;
 }
 
-.navbar .text.right:last-child {
-  margin-right: 4vw;
+#myLinksTop {
+  position: absolute;
+  top: 14vw;
+  left: 0;
+  width: 15%;
+  height: 20vw;
+  z-index: 10;
+  padding: 3vw;
+  /* background-color: #78bddfd7; */
+  background-color: var(--navbar-text);
 }
+#myLinksTop a {
+  padding-top: 3vw;
+}
+/* =============== */
 
 .hero {
   width: 100%;
@@ -116,13 +146,16 @@ a,
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+
+  top: auto;
+  bottom: 30%;
+
   width: auto;
   margin-top: 0px;
   padding: 2vw;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 3.6vw;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -134,6 +167,14 @@ a,
   border-radius: 3px 0 0 3px;
 }
 
+/* ============ */
+/* Make the image's parent the positioning context */
+section.hero .slideshow-container {
+  position: relative; /* This makes the slideshow-container the containing block */
+}
+
+/* ============ */
+
 /* Fades after clicked, add a black background color with a little bit see-through */
 .prev,
 .next {
@@ -142,7 +183,7 @@ a,
 
 .prev:active,
 .next:active {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Fading animation */
@@ -164,7 +205,7 @@ a,
   width: 100%;
   background-color: #a5b3c154;
   text-align: center;
-  padding: 4vw;
+  padding: 5vw;
 }
 
 .banner h2 {
@@ -182,12 +223,21 @@ a,
   justify-content: center;
   background-color: var(--background-color);
 }
-.testimonial {
+
+.testimonials:first-child {
   margin-top: 12vw;
   padding: 8vw;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 75%;
+}
+
+.testimonial {
+  /* margin-top: 12vw; */
+  padding: 8vw;
+
+  /* border: 1px solid #ddd;
+  border-radius: 10px; */
+
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   width: 75%;
 }
 .testimonial cite {
